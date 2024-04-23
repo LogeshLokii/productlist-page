@@ -9,12 +9,6 @@ import CardContent from '@mui/material/CardContent';
 import Card from '@mui/material/Card';
 
 const NavBar = () => {
-  const [zipCode, setZipCode] = React.useState("");
-
-  const handleZipCodeChange = (event) => {
-    setZipCode(event.target.value);
-  };
-
   return (
     <div>
       <AppBar position="static" color="transparent">
@@ -47,30 +41,6 @@ const NavBar = () => {
   );
 };
 
-// const ModelCard = ({ title, image, inventoryType, price, financing, odometer, isDemo }) => {
-//   return (
-//     <Container>
-//       <img src={image} alt={title} style={{ width: '100%' }} />
-//       <Typography variant="h6" gutterBottom>
-//         {title}
-//       </Typography>
-//       <Typography variant="body1" gutterBottom>
-//         {inventoryType}
-//       </Typography>
-//       <Typography variant="body1" gutterBottom>
-//         {price}
-//       </Typography>
-//       <Typography variant="body1" gutterBottom>
-//         {financing}
-//       </Typography>
-//       <Typography variant="body1" gutterBottom>
-//         {odometer}
-//       </Typography>
-//       {isDemo && <Typography variant="body1" gutterBottom>
-//         Demo Vehicle
-//       </Typography>}
-//     </Container>
-//   );
-// };
+
 
 export default NavBar;

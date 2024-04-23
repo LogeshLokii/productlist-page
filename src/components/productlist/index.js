@@ -26,16 +26,12 @@ const sampleProducts = [
     id: "34sfg43xcb",
     name: "Crompton Energion Groove Remote Wooden",
     price: 180,
-    description: "Energion Groove 5 Star Rated Fan with ActivBLDC Technology",
-    image:
-      "https://d13bbii8ozdt01.cloudfront.net/uploads/2022/08/61lsL369n5L._SL1500_.jpg",
+    image:"https://d13bbii8ozdt01.cloudfront.net/uploads/2022/08/61lsL369n5L._SL1500_.jpg",
   },
   {
     id: "45ergewcb",
     name: "Atomberg Renesa Ceiling Fan",
     price: 300,
-    description:
-      "Atomberg Renesa Energy Efficient Ceiling Fan with BLDC Motor and Remote",
     image:
       "https://media.atomberg.com/media/catalog/product/b/r/brownblack2_1_1.jpg?auto=webp&format=pjpg&width=640&height=800&fit=cover",
   },
@@ -150,7 +146,7 @@ const ProductList = ({ }) => {
   };
 
   const handleSort = () => {
-    const sortedProducts = [...products].sort((a, b) => {
+    const sortedProducts = products.sort((a, b) => {
       if (sortOrder === "asc") {
         return a.price - b.price;
       } else {
@@ -169,8 +165,8 @@ const ProductList = ({ }) => {
 
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
+
   const currentProducts = products.slice(startIndex, endIndex);
-  console.log(currentProducts)
 
   const searchInputhandler = (e) => {
     setSearchTerm(e.target.value);
